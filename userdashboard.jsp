@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,25 +45,41 @@
     </div>
     <div class="middle-part">
     <%@page import="java.sql.DriverManager"%>
+=======
+<%@page import="java.sql.DriverManager"%>
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 
 <%
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
 String driverName = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
 String dbName = "hms";
 String userId = "root";
 String password = "root";
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
 try {
 Class.forName(driverName);
 } catch (ClassNotFoundException e) {
 e.printStackTrace();
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
 Connection connection = null;
 Statement statement = null;
 ResultSet resultSet = null;
 %>
+<<<<<<< HEAD
 <div class="input">
     <div class="input-group">
         <div class="form-outline">
@@ -74,11 +91,18 @@ ResultSet resultSet = null;
     </div>
 </div>
 
+=======
+<h2 align="center"><font><strong>Retrieve data from database in jsp</strong></font></h2>
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
 <table align="center" cellpadding="5" cellspacing="5" border="1">
 <tr>
 
 </tr>
+<<<<<<< HEAD
 <tr bgcolor="#000000">
+=======
+<tr bgcolor="#A52A2A">
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
 <td><b>Name</b></td>
 <td><b>Address</b></td>
 <td><b>Phone</b></td>
@@ -89,12 +113,20 @@ try{
 connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 statement=connection.createStatement();
 String sql ="SELECT * FROM hotelreg limit 8";
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
 <tr bgcolor="#DEB887">
 
+<<<<<<< HEAD
 <td><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>"><%=resultSet.getString("nam") %></a></td>                   <!-- dont change nam -->
+=======
+<td><%=resultSet.getString("nam") %></td>                   <!-- dont change nam -->
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
 <td><%=resultSet.getString("address") %></td>
 <td><%=resultSet.getString("phone") %></td>
 
@@ -103,10 +135,15 @@ while(resultSet.next()){
 
 <% 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
 } catch (Exception e) {
 e.printStackTrace();
 }
 %>
+<<<<<<< HEAD
 </table>
 </div>
 <div class="lower-part">
@@ -114,3 +151,6 @@ e.printStackTrace();
 </div>
 </body>
 </html>
+=======
+</table>
+>>>>>>> a5b2ae592fa90d6e059e65f7c91c53c4e83fdc93
