@@ -26,6 +26,9 @@
         <div class="logo">
           <img src="./images/clipart1693714.png" />
         </div>
+        <div class="heading">
+          <h1>Bon Voyage</h1>
+        </div>
         <li><a href="#booking">Bookings</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>

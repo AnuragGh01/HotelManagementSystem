@@ -3,10 +3,23 @@
   padding: 0;
 }
 
+.heading h1 {
+  color: white;
+  padding: 10px;
+}
+
+.heading {
+  font-family: "Hurricane", cursive;
+  font-family: "Julius Sans One", sans-serif;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content:stretch;
   position: sticky;
   top: 0;
   cursor: pointer;
