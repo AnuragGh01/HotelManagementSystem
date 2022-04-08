@@ -1,0 +1,106 @@
+body
+{
+    background-image: url('../images/swiss-alps-cold-mountains-silhouette-5k-ds-2880x1800.jpg');
+    background-size: cover;
+}
+
+.upper-part
+{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background: black;
+}
+
+.left-part
+{
+    display: flex;
+}
+
+.heading h1
+{
+    font-family: 'Hurricane', cursive;
+font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    padding: 10px;;
+}
+
+.logo
+{
+    display: flex;
+    margin-left: 20px;
+}
+
+.logo img
+{
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+    border-radius: 50px;
+}
+
+.right-part
+{
+    display: flex;
+}
+
+.dropdown
+{
+    padding:30px;
+}
+
+.dropdown button
+{
+    background: gray;
+}
+
+#button1
+{
+    display: flex;
+    width: 95px;
+}
+
+#button1 i
+{
+    padding:5px;
+}
+
+.container
+{
+    display: flex;
+    height: 300px;
+    width: 800px;
+    margin-top: 150px;
+    margin-left: 380px;
+    background: white;
+    opacity: 0.7;
+}
+
+.labels
+{
+    padding:10px;
+}
+
+label
+{
+    color: black;
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.lower-part
+{
+    margin-top: 100px;
+    background: black;
+    height: 90px;
+}
+
+  .text-footer {
+    text-align: center;
+    padding: 30px 0;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+
