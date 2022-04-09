@@ -55,7 +55,7 @@
                         <input type="password" maxlength="3" class="inputbox" name="cvv" id="cvv" placeholder="xxx" required />
                     </div>
                     <p></p>
-                    <button type="submit" class="btn btn-sm">Confirm Payment</button>
+                    <button onclick="location.href='paysuccess.jsp'" type="submit" class="btn btn-sm">Confirm Payment</button>
                 </form>
             </div>
         </div>

@@ -1,0 +1,57 @@
+body {
+  background-image: url("../images/swiss-alps-cold-mountains-silhouette-5k-ds-2880x1800.jpg");
+  background-size: cover;
+  /* height: 550px; */
+}
+
+
+.payment {
+  border: 1px solid #f2f2f2;
+  height: 280px;
+  border-radius: 20px;
+  background: #fff;
+}
+.payment_header {
+  background: rgb(17, 16, 16);
+  padding: 20px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.check {
+  margin: 0px auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #fff;
+  text-align: center;
+}
+
+.check i {
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 30px;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 25px;
+  padding-top: 25px;
+}
+
+.content button {
+  width: 150px;
+  height: 35px;
+  color: #fff;
+  border-radius: 30px;
+  padding: 5px 10px;
+  background: rgb(17, 16, 16);
+  transition: all ease-in-out 0.2s;
+}
+
+.content button:hover {
+  text-decoration: none;
+  background: rgba(24, 22, 22, 0.938);
+}
