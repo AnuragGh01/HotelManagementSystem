@@ -16,13 +16,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/62847faab8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/account.css">
-    <title>Document</title>
+    <title>Profile</title>
 </head>
 <body>
     <div class="upper-part">
         <div class="left-part">
             <div class="logo">
-                <img src="images/clipart1693714.png">
+                <a href="userinterface.jsp"><img src="images/clipart1693714.png"></a>
             </div>
             <div class="heading">
                <h1>Bon Voyage</h1>
@@ -30,7 +30,7 @@
         </div>
         <div class="right-part">
             <div class="dropdown">
-                <button type="button" class="btn btn-primary" id="button1" onclick="location.href='userInterface.html'">
+                <button type="button" class="btn btn-primary" id="button1" onclick="location.href='userinterface.jsp'">
                     <i class="fa-solid fa-house"></i>
                     Home 
                 </button>
@@ -43,27 +43,74 @@
             </div>
         </div>
     </div>
+     <%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+
+<%
+
+String driverName = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:mysql://localhost:3306/";
+String dbName = "hms";
+String userId = "root";
+String password = "root";
+
+try {
+Class.forName(driverName);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+
+
+
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
+ <%
+try{ 
+connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+statement=connection.createStatement();
+String s1=(String)session.getAttribute("sesmail");
+System.out.println(s1);
+String sql ="SELECT * FROM usrreg where email='" +s1+"'";
+System.out.println(s1);
+
+
+resultSet = statement.executeQuery(sql);
+while(resultSet.next()){
+%>
     <div class="container">
         <div class="inside">
             <div class="labels">
-                <label>Name:</label>                                                 <!--Data Fetch-->
+                <label>Name: <%=resultSet.getString("nam") %></label>                                                 <!--Data Fetch-->
             </div>
             <div class="labels">
-                <label>Email:</label>                                                <!--Data Fetch-->
+                <label>Email: <%=resultSet.getString("email") %></label>                                                <!--Data Fetch-->
             </div>
             <div class="labels">                                                     
-                <label>Phone:</label>                                                <!--Data Fetch-->       
+                <label>Phone: <%=resultSet.getString("phone") %></label>                                                <!--Data Fetch-->       
             </div>
             <div class="labels">
-                <label>Address:</label>                                              <!--Data Fetch-->
+                <label>Address: <%=resultSet.getString("address") %></label>                                              <!--Data Fetch-->
             </div>
             <div class="labels">
                 <label>Aadhar:</label>                                               <!--Data Fetch-->
             </div>
         </div>
     </div>
+    <% 
+}
+
+
+} catch (Exception e) {
+e.printStackTrace();
+}
+%>
     <div class="lower-part">
-        <p class="text-footer">Contact us at  Email :<a href="">hms@example.com </a>  ,   Phone :1234567890</p>
+        <p class="text-footer">Contact us at  Email :<a href="">bonvoyageofficial.in@gmail.com</a></p>
    </div>
    
 </body>
