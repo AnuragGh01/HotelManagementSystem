@@ -28,7 +28,7 @@
     <nav class="navbar background">
       <ul class="nav-list">
         <div class="logo">
-          <img src="./images/clipart1693714.png" />
+          <a href="userinterface.jsp"><img src="images/clipart1693714.png"></a>
         </div>
         <div class="heading">
           <h1>Bon Voyage</h1>
@@ -48,6 +48,32 @@
         </button>
       </div>
     </nav>
+    <%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+
+<%
+
+String driverName = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:mysql://localhost:3306/";
+String dbName = "hms";
+String userId = "root";
+String password = "root";
+
+try {
+Class.forName(driverName);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+
+
+
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
 
     <section class="firstsection">
       <div class="box-main">
@@ -66,15 +92,37 @@
             </thead>
 
             <tbody>
+            <%
+try{ 
+connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+statement=connection.createStatement();
+String s1=(String)session.getAttribute("sesmail");
+System.out.println(s1);
+String sql ="SELECT * FROM usrbook where usrmail='" +s1+"'";
+
+
+resultSet = statement.executeQuery(sql);
+while(resultSet.next()){
+%>
+            
               <tr>
                 <!--While loop-->
-                <td data-label="name">Taj Hotel</td>
-                <td data-label="loc">Kolkata</td>
-                <td data-label="in">14-Apr-2022</td>
-                <td data-label="out">16-Apr-2022</td>
-                <td data-label="peop">3</td>
-                <td data-label="type">A.C</td>
+                <td data-label="name"><%=resultSet.getString("hotnam") %></td>
+                <td data-label="loc"><%=resultSet.getString("location") %></td>
+                <td data-label="in"><%=resultSet.getString("indate") %></td>
+                <td data-label="out"><%=resultSet.getString("outdate") %></td>
+                <td data-label="peop"><%=resultSet.getString("nop") %></td>
+                <td data-label="type"><%=resultSet.getString("roomtyp") %></td>
               </tr>
+              
+<% 
+}
+
+
+} catch (Exception e) {
+e.printStackTrace();
+}
+%>
             </tbody>
           </table>
         </div>
@@ -84,9 +132,7 @@
     <section id="contact">
       <footer class="background">
         <p class="text-footer">
-          Contact us at Email :<a href="">hms@example.com </a> , Phone
-          :1234567890
-        </p>
+          Contact us at Email :<a href="">bonvoyageofficial.in@gmail.com</a></p>
       </footer>
     </section>
   </body>
