@@ -13,14 +13,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/62847faab8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="css/search.css">
     <title>Document</title>
 </head>
 <body>
     <div class="upper-part">
         <div class="left-part">
             <div class="logo">
-                <img src="clipart1693714.png">
+                <img src="images/clipart1693714.png">
             </div>
             <div class="heading">
                <h1>Bon Voyage</h1>
@@ -28,7 +28,7 @@
         </div>
         <div class="right-part">
             <div class="dropdown">
-                <button type="button" class="btn btn-primary" id="button1" onclick="location.href='userInterface.html'">
+                <button type="button" class="btn btn-primary" id="button1" onclick="location.href='userinterface.jsp'">
                     <i class="fa-solid fa-house"></i>
                     Home 
                 </button>
@@ -42,31 +42,79 @@
         </div>
     </div>
     <div class="middle-part">
+    <%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+
+<%
+
+String driverName = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:mysql://localhost:3306/";
+String dbName = "hms";
+String userId = "root";
+String password = "root";
+
+try {
+Class.forName(driverName);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+
+
+
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
+		<form action="SearchServ" method="post">
         <div class="input">
             <div class="input-group">
                 <div class="form-outline">
-                    <input type="search" id="form1" class="form-control" placeholder="Search places (E.g.: Delhi) or Hotel"></input>
+                    <input type="text" name="search" id="form1" class="form-control" placeholder="Search places (E.g.: Delhi) or Hotel"></input>
                 </div>
-                <button type="button" class="btn btn-primary" id="button">
+                <button type="submit" class="btn btn-primary" id="button">
                     Search
                 </button>
             </div>
         </div>
+        </form>
         <div class="container">
             <div class="inside">
                 <ul>
+                 <%String search=(String)session.getAttribute("search");%>
+                 <%System.out.println(search); %>
+                  <%
+try{ 
+connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+statement=connection.createStatement();
+String sql ="SELECT * FROM hotelreg where address='" +search+"' or nam='" +search+"'";
+
+
+resultSet = statement.executeQuery(sql);
+while(resultSet.next()){
+%>
                     <!--Loop here-->
+                    
                     <li class="items">                                 <!--Ekhan theke-->
-                        <img src="Top-10-Luxury-Hotels-in-India.jpg">
+                        <img src="images/Top-10-Luxury-Hotels-in-India.jpg">
                         <div class="details">
-                            Mariott Hotel
+                           <h3><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>"><%=resultSet.getString("nam")%></a></h3>
                             <br>
-                            Price: 
+                            Price: 500
                             <br>
-                            Location: 
+                            <%=resultSet.getString("address")%> 
                         </div>
                     </li>                                              <!--Eto ta-->
-                
+                    <% 
+}
+
+
+} catch (Exception e) {
+e.printStackTrace();
+}
+%>
                 </ul>
             </div>
         </div>
