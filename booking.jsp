@@ -24,10 +24,7 @@
     <nav class="navbar background">
       <ul class="nav-list">
         <div class="logo">
-          <img src="./images/clipart1693714.png" />
-        </div>
-        <div class="heading">
-          <h1>Bon Voyage</h1>
+          <a href="userinterface.jsp"><img src="images/clipart1693714.png"></a>
         </div>
         <li><a href="#booking">Bookings</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -43,9 +40,26 @@
     <section class="firstsection" id="booking">
       <div class="box-main">
         <div style="position: absolute; left: 100px" class="firstHalf">
-          <form action="" method="post">
-            <h2 style="font-weight: bold">Hotel Asansol International</h2>
+          <form action="UsrBookServ" method="post">
+          <% 
+String ss =request.getParameter("nam");
+String st =request.getParameter("address");
+
+System.out.println(ss+" "+st);
+session.setAttribute("hotnam",ss);
+session.setAttribute("location",st);
+
+%>
+            <i><u><h1 style="font-weight: bold"><%out.print(ss);%></h1></u></i>
+            <i><h1 style="font-weight: bold">(<%out.print(st);%>)</h1></i>
+            
+            <%String s1=(String)session.getAttribute("sesmail");%>
+            <i><h4 style="font-weight: bold;left:1000px;top:7px; position:absolute">Your registered email is: <u><%out.print(s1);%></u></h4></i>
+            
             <div class="grid">
+            <label style="font-weight: bold" for="arrive" class="label-date"
+                >Check-in Date</label
+              >
               <input
                 type="date"
                 id="arrive_d"
@@ -54,9 +68,7 @@
                 value=""
                 required
               />
-              <label style="font-weight: bold" for="arrive" class="label-date"
-                >Check-in Date</label
-              >
+              
               <br />
               <label style="font-weight: bold" for="arrive" class="label-time"
                 >Check-in Time</label
@@ -70,6 +82,9 @@
               />
 
               <br />
+              <label style="font-weight: bold" for="depart" class="label-date"
+                >Check-out Date</label
+              >
               <input
                 type="date"
                 id="depart_d"
@@ -78,9 +93,7 @@
                 value=""
                 required
               />
-              <label style="font-weight: bold" for="depart" class="label-date"
-                >Check-out Date</label
-              >
+              
               <br />
               <label style="font-weight: bold" for="depart" class="label-time"
                 >Check-out Time</label
@@ -94,38 +107,34 @@
               />
             </div>
             <div
-              style="position: absolute; right: -250px; top: 70px"
+              style="position: absolute; right: -400px; top: 135px"
               class="grid"
             >
-              <select name="peop" id="peop" class="btn" required>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
+              <input type="number" class="btn" name="nop" required>
               <label style="font-weight: bold" for="people"
                 >No. of People</label
               >
               <br />
               <select name="room" id="room" class="btn">
-                <option value="ac">A.C</option>
-                <option value="nonac">Non-A.C</option>
+                <option value="AC">AC</option>
+                <option value="Non-AC">Non-AC</option>
               </select>
               <label style="font-weight: bold" for="fruit">Room Type</label>
               <br />
             </div>
 
-            <div style="position: absolute; right: -320px; bottom: 80px ;">
+            <div style="position: absolute; right: -750px; bottom: 230px ;">
               <h4>No. of A.C rooms available: 5</h4>
               <h4>No. of non-A.C rooms available: 5</h4>
             </div>
-            <div style="position: absolute; right: -620px; bottom: 80px ;">
-              <h4>Price of A.C rooms: 500</h4>
-              <h4>Price of non-A.C rooms: 500</h4>
+            <div style="position: absolute; right: -720px; bottom: 150px ;">
+              <h4>Price of A.C rooms: 2000</h4>
+              <h4>Price of non-A.C rooms: 1000</h4>
             </div>
             <div class="grid">
               <br />
-              <button type="submit" value="Submit" class="btn btn-sm">
-                Book Now
+              <button type="submit" value="Submit" class="btn btn-sm" >
+               Book Now
               </button>
             </div>
           </form>
@@ -136,9 +145,7 @@
     <section id="contact">
       <footer class="background">
         <p class="text-footer">
-          Contact us at Email :<a href="">hms@example.com </a> , Phone
-          :1234567890
-        </p>
+          Contact us at Email :<a href="">bonvoyageofficial.in@gmail.com </a></p>
       </footer>
     </section>
   </body>
