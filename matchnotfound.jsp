@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/62847faab8.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/62847faab8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/matchnotfound.css">
     <title>Document</title>
 </head>
@@ -35,7 +35,7 @@
             </div>
             <div class="dropdown">
                 <button type="button" class="btn btn-primary" id="button" id="button2" onclick="location.href='homepage.html'">
-                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     Logout 
                 </button>
             </div>
