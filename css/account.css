@@ -1,71 +1,103 @@
-body
-{
-    background-image: url('../images/swiss-alps-cold-mountains-silhouette-5k-ds-2880x1800.jpg');
-    background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.upper-part
-{
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    background: black;
+.navbar {
+  display: flex;
+  align-items: center;
+  /* justify-content: left; */
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-.left-part
-{
-    display: flex;
+.background {
+  background: black;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center 120px;
 }
 
-.heading h1
-{
-    font-family: 'Hurricane', cursive;
-font-family: 'Julius Sans One', sans-serif;
-    color: white;
-    padding: 10px;;
+.nav-list {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
-.logo
-{
-    display: flex;
-    margin-left: 20px;
+.logo {
+  display: flex;
+  justify-content:left;
+  align-items: center;
 }
 
-.logo img
-{
-    max-width: 100%;
-    height: auto;
-    width: 150px;
-    border-radius: 50px;
+.logo img {
+  max-width: 100%;
+  height: auto;
+  width: 350px;
+  border-radius: 50px;
 }
 
-.right-part
-{
-    display: flex;
+.rightnav {
+  width: 30%;
+  text-align: right;
+}
+.btn {
+  width: auto;
+  height: auto;
+  padding: 8px 20px;
+  margin: 7px 0;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: none;
+  color: white;
+  cursor: pointer;
 }
 
-.dropdown
-{
-    padding:30px;
+.btn:hover {
+  background-color: rgb(22, 22, 22);
 }
 
-.dropdown button
-{
-    background: gray;
+.btn-sm {
+  padding: 6px 10px;
+  vertical-align: middle;
 }
 
-#button1
-{
-    display: flex;
-    width: 95px;
+.text-footer {
+  text-align: center;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 
-#button1 i
-{
-    padding:5px;
+.firstsection {
+  background-image: url("../images/bg-ab.jpg");
+  background-size: cover;
+  height:120vh;
 }
 
-.container
+.box-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  max-width: 80%;
+  margin: auto;
+  height: 60%;
+}
+
+.firsthalf {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* .container
 {
     display: flex;
     height: 300px;
@@ -86,21 +118,4 @@ label
     color: black;
     font-size: 25px;
     font-family: 'Kanit', sans-serif;
-}
-
-.lower-part
-{
-    margin-top: 100px;
-    background: black;
-    height: 90px;
-}
-
-  .text-footer {
-    text-align: center;
-    padding: 30px 0;
-    font-family: "Ubuntu", sans-serif;
-    display: flex;
-    justify-content: center;
-    color: white;
-  }
-
+} */

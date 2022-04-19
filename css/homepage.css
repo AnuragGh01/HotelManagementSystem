@@ -61,13 +61,13 @@
 .firstsection {
   background-image: url("../images/bg-ab.jpg");
   background-size: cover;
-  height: 650px;
+  height: 100vh;
 }
 
 .secondsection {
   background-image: url("../images/bg-dev.jpg");
   background-size: cover;
-  height: 650px;
+  height: 100vh;
 }
 
 .box-main {
@@ -177,7 +177,7 @@
 }
 
 .containeri:hover .image {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .containeri:hover .middle {

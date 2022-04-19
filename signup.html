@@ -4,43 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hurricane&family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/signup.css" />
     <title>Signup</title>
-    <link rel="stylesheet" href="./css/signup.css" />
-    <style>
-      body {
-        background-image: url("./images/MtFuji-GettyImages-959111140.jpg");
-        background-size: cover;
-        /* background-repeat: no-repeat; */
-      }
-    </style>
-    <link rel="shortcut icon" href="./images/clipart1693714.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <script
       src="https://kit.fontawesome.com/32ee0c0b42.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
   </head>
   <body>
-    <div
-      style="
-        position: absolute;
-        margin: auto;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 200px;
-        height: 200px;
-      "
-    >
-      <h1 style="font-family: sans-serif;">Are you a ?</h1>
-      <!-- Button to open the Modal -->
-      <button onclick="document.getElementById('id01').style.display='block'">
-        <i class="fa-solid fa-person-walking-luggage"></i> Customer
-      </button>
-      <button onclick="document.getElementById('id02').style.display='block'">
-        <i class="fa-solid fa-monument"></i> Enterprice
-      </button>
-    </div>
+
+
+    <nav class="navbar background">
+      <ul class="nav-list">
+        <div class="logo">
+          <img src="./images/clipart1693714.png" />
+        </div>
+      </ul>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="rightNav">
+        <button onclick="location.href='homepage.html'" class="btn btn-sm">
+            <i class="fa-solid fa-circle-arrow-left"></i><nobr> Go Back</nobr></button
+        >
+      </div>
+    </nav>
+
+    <section class="firstsection">
+      <div class="box-main">
+        <div class="firstHalf">
+          <div class="project">
+              <h2 style="font-family: sans-serif; color:aliceblue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you a ?</h2><br>
+              <!-- Button to open the Modal -->
+              <button class="btn btn-sm" onclick="document.getElementById('id01').style.display='block'">
+                <i class="fa-solid fa-person-walking-luggage"></i> Customer
+              </button>&nbsp;&nbsp;
+              <button class="btn btn-sm" onclick="document.getElementById('id02').style.display='block'">
+                <i class="fa-solid fa-monument"></i> Enterprice
+              </button>
+              </div>
+            </div>
+          </div>
+    </section>
 
     <!-- The Modal1 (contains the Sign Up form for Customer) -->
     <div id="id01" class="modal">
@@ -86,7 +101,9 @@
           </p>
 
           <div class="clearfix">
-            <button type="submit" class="signup">Sign Up</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Sign Up</button>
           </div>
         </div>
       </form>
@@ -145,11 +162,19 @@
           </p>
 
           <div class="clearfix">
-            <button type="submit" class="signup">Sign Up</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Sign Up</button>
           </div>
         </div>
       </form>
     </div>
+
+    <footer class="background">
+      <p class="text-footer">© Copyright 2022 BonVoyage. All rights reserved.</p>
+  </footer>
+    
     <script>
       // Get the modal
       var modal1 = document.getElementById("id01");

@@ -14,15 +14,12 @@
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="shortcut icon"
-      href="./images/clipart1693714.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <script
       src="https://kit.fontawesome.com/32ee0c0b42.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   </head>
   <body>
     <nav class="navbar background">
@@ -30,25 +27,25 @@
         <div class="logo">
           <a href="userinterface.jsp"><img src="images/clipart1693714.png"></a>
         </div>
-        <div class="heading">
-          <h1>Bon Voyage</h1>
-        </div>
-        <li><a href="#contact">Contact</a></li>
       </ul>
-
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <div class="rightNav">
         <button onclick="location.href='userinterface.jsp'" class="btn btn-sm">
           <i class="fa-solid fa-house"></i>
           Home
         </button>
-        &nbsp;&nbsp;&nbsp;
-        <button onclick="location.href='homepage.html'" class="btn btn-sm">
-          <i class="fa-solid fa-right-from-bracket"></i>
-          Logout
+        &nbsp;&nbsp;
+        <button
+          type="button"
+          class="btn btn-sm"
+          id="button"
+          onclick="location.href='homepage.html'"
+        >
+          <i class="fas fa-external-link-alt"></i> Logout
         </button>
       </div>
     </nav>
-    <%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -129,11 +126,8 @@ e.printStackTrace();
       </div>
     </section>
 
-    <section id="contact">
-      <footer class="background">
-        <p class="text-footer">
-          Contact us at Email :<a href="">bonvoyageofficial.in@gmail.com</a></p>
-      </footer>
-    </section>
+    <footer class="background">
+      <p class="text-footer">© Copyright 2022 BonVoyage. All rights reserved.</p>
+  </footer>
   </body>
 </html>
