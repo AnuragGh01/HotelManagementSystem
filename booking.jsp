@@ -14,11 +14,12 @@
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="shortcut icon"
-      href="./images/clipart1693714.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <script
+      src="https://kit.fontawesome.com/32ee0c0b42.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   </head>
   <body>
     <nav class="navbar background">
@@ -26,15 +27,17 @@
         <div class="logo">
           <a href="userinterface.jsp"><img src="images/clipart1693714.png"></a>
         </div>
-        <li><a href="#booking">Bookings</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
-
-      <!-- <div class="rightNav">
-        <button onclick="location.href='homepage.html'" class="btn btn-sm">
-          Logout
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="rightNav">
+        <button onclick="location.href='userinterface.jsp'" class="btn btn-sm">
+          <i class="fa-solid fa-house"></i>
+          Home
         </button>
-      </div> -->
+      </div>
     </nav>
 
     <section class="firstsection" id="booking">
@@ -123,18 +126,18 @@ session.setAttribute("location",st);
               <br />
             </div>
 
-            <div style="position: absolute; right: -750px; bottom: 230px ;">
-              <h4>No. of A.C rooms available: 5</h4>
-              <h4>No. of non-A.C rooms available: 5</h4>
+            <div style="position: absolute; right: -340px; bottom: 120px ;">
+              <h4 style="font-weight: 500;">No. of A.C rooms available: 5</h4>
+              <h4 style="font-weight: 500;">No. of non-A.C rooms available: 5</h4>
             </div>
-            <div style="position: absolute; right: -720px; bottom: 150px ;">
-              <h4>Price of A.C rooms: 2000</h4>
-              <h4>Price of non-A.C rooms: 1000</h4>
+            <div style="position: absolute; right: -298px; bottom: 40px ;">
+              <h4 style="font-weight: 500;">Price of A.C rooms: 2000</h4>
+              <h4 style="font-weight: 500;">Price of non-A.C rooms: 1000</h4>
             </div>
             <div class="grid">
               <br />
               <button type="submit" value="Submit" class="btn btn-sm" >
-               Book Now
+                &nbsp;&nbsp;Book Now&nbsp;&nbsp;
               </button>
             </div>
           </form>
@@ -142,11 +145,8 @@ session.setAttribute("location",st);
       </div>
     </section>
 
-    <section id="contact">
-      <footer class="background">
-        <p class="text-footer">
-          Contact us at Email :<a href="">bonvoyageofficial.in@gmail.com </a></p>
-      </footer>
-    </section>
+    <footer class="background">
+      <p class="text-footer">© Copyright 2022 BonVoyage. All rights reserved.</p>
+  </footer>
   </body>
 </html>

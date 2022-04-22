@@ -1,30 +1,100 @@
-body
+* {
+    margin: 0;
+    padding: 0;
+  }
+.navbar {
+    display: flex;
+    align-items: center;
+    /* justify-content: left; */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .background {
+    background: black;
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center 120px;
+  }
+  
+  .nav-list {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+  }
+  
+  .logo img {
+    max-width: 100%;
+    height: auto;
+    width: 350px;
+    border-radius: 50px;
+  }
+  
+  
+  .rightnav {
+    width: 30%;
+    text-align: right;
+  }
+  
+  .firstsection {
+    background-image: url("../images/bg-ab.jpg");
+    background-size: cover;
+    height: 100vh;
+  }
+  .box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    max-width: 80%;
+    margin: auto;
+    height: 80%;
+  }
+  
+  .firsthalf {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+/* body
 {
     display: flex;
     justify-content: space-around;
     background-image: url('../images/MtFuji-GettyImages-959111140.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .project
 {
     display: flex;
     justify-content: space-around;
-    background: white;
+    background: rgb(8, 8, 8);
     opacity: 0.8;
-    margin-top: 200px;
+    margin-top: 45px;
     /* padding: 4vh 10%; */
     padding-top: 65px;
     padding-bottom: 65px;
     padding-left: 20px;
     padding-right: 20px;
+    border-radius: 10%;
    
 }
 
 
 .form h1
 {
+    color: aliceblue;
     margin-left: 140px;
     font-family: 'Hurricane', cursive;
     font-family: 'Julius Sans One', sans-serif;
@@ -33,13 +103,19 @@ body
 .form-group
 {
     padding: 10px;
+    justify-content: center;
 }
 
 .form-group a
 {
-    font-family: sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
-    color:black;
+    color:rgb(240, 240, 240);
+}
+
+.form-group p {
+    color: aliceblue;
+    font-family:sans-serif;
 }
 
 .form input
@@ -51,22 +127,52 @@ body
     
 }
 
-button
+.btn {
+    width: auto;
+    height: auto;
+    padding: 8px 20px;
+    margin: 7px 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: rgb(22, 22, 22);
+  }
+  
+  .btn-sm {
+    padding: 6px 10px;
+    vertical-align: middle;
+  }
+
+/* button
 {
     margin-left: 140px;
     border-radius: 8px;
     width:100px;
     /*background-color: #04CA50; */
-    transition-duration: 0.4s;
-}
+    /* transition-duration: 0.4s; */
+/* } */
 
-.button:hover
+/* .button:hover
 {
     background-color: #04CA50;
     color: white;
-}
+} */ 
 
 /* input[type=email]
 {
     
 } */
+
+.text-footer {
+    text-align: center;
+    padding: 30px 0;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }

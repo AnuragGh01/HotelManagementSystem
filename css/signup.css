@@ -1,6 +1,50 @@
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  /* justify-content: left; */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.background {
+  background: black;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center 120px;
+}
+
+.nav-list {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.logo {
+  display: flex;
+  justify-content:left;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  width: 350px;
+  border-radius: 50px;
+}
+
+
+.rightnav {
+  width: 30%;
+  text-align: right;
+}
+
 /* Full-width input fields */
 input[type="text"],
 input[type=email],
@@ -23,7 +67,7 @@ input[type="password"]:focus {
 }
 
 /* Set a style for all buttons */
-button {
+/* button {
   background-color: #1b2dd3;
   color: white;
   padding: 10px 50px;
@@ -36,14 +80,78 @@ button {
 
 button:hover {
   opacity: 1;
+} */
+
+.btn {
+  width: auto;
+  height: auto;
+  padding: 8px 20px;
+  margin: 7px 0;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(22, 22, 22);
+}
+
+.btn-sm {
+  padding: 6px 10px;
+  vertical-align: middle;
+}
+
+.firstsection {
+  background-image: url("../images/bg-ab.jpg");
+  background-size: cover;
+  height: 80vh;
+}
+.box-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  max-width: 80%;
+  margin: auto;
+  height: 80%;
+}
+
+.firsthalf {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project
+{
+    /* display: flex; */
+    justify-content: space-around;
+    background: rgb(8, 8, 8);
+    opacity: 0.8;
+    margin-top: 50px;
+    /* padding: 4vh 10%; */
+    padding-top: 65px;
+    padding-bottom: 65px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10%;
+   
 }
 
 
-/* Float signup button and add an equal width */
-.signupbtn {
-  float: left;
-  width: 50%;
+.text-footer {
+  text-align: center;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
+
+
 
 /* Add padding to container elements */
 .container {
@@ -54,30 +162,34 @@ button:hover {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   /* background-color: #474e5d; */
-  background-image: url("./images/MtFuji-GettyImages-959111140.jpg");
-  background-size: 1500px 700px;
+  background-size: 1000px 450px;
   padding-top: 50px;
+}
+
+.container h1,p,label {
+  color: aliceblue;
 }
 
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background: rgb(8, 8, 8);
+  opacity: 0.9;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 70%; /* Could be more or less, depending on screen size */
+  width: 65%; /* Could be more or less, depending on screen size */
+  border-radius: 5%;
 }
 
 /* Style the horizontal ruler */
 hr {
-  border: 1px solid #f1f1f1;
+  border: 0.5px solid #f1f1f1;
   margin-bottom: 25px;
 }
 
@@ -86,11 +198,4 @@ hr {
   content: "";
   clear: both;
   display: table;
-}
-
-/* Change styles for signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .signupbtn {
-    width: 100%;
-  }
 }

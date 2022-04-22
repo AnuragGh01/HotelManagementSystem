@@ -22,8 +22,8 @@
       href="https://fonts.googleapis.com/css2?family=Hurricane&family=Julius+Sans+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/login.css" />
-    <title>Signin</title>
+    <link rel="stylesheet" href="css/otp.css" />
+    <title>Enter OTP</title>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <script
       src="https://kit.fontawesome.com/32ee0c0b42.js"
@@ -41,38 +41,28 @@
           <img src="./images/clipart1693714.png" />
         </div>
       </ul>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <div class="rightNav">
         <button onclick="location.href='homepage.html'" class="btn btn-sm">
             <i class="fa-solid fa-circle-arrow-left"></i><nobr> Go Back</nobr></button
         >
-      </div>
+      </div> -->
     </nav>
     <section class="firstsection">
       <div class="box-main">
         <div class="firstHalf">
           <div class="project">
-            <form class="form" action="LoginServ" method="post">
-              <h1>Login</h1>
-              
-              <div class="form-group">
-                <p><i class="fa-solid fa-envelope"></i> Enter your Email :</p>
-                <br>
-                <input type="email" name="email" placeholder="Email" required />
-              </div>
-              <div class="form-group">
-                <p><i class="fa-solid fa-lock"></i> Enter your Password :</p>
-                <br>
-                <input type="password" name="psw" placeholder="Password" required />
-              </div>
-              <div class="form-group">
-                <a href="forgot.html">Forgot Password ?</a>
-              </div>
-              <div class="form-group">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-sm" type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
-              </div>
+            <form class="form" action="OtpEmailServ" method="post">
+                <h1>&nbsp;&nbsp;Enter your OTP :</h1>
+                <div class="form-group">
+                    <input type="text" name="otp" placeholder="Enter OTP" required>
+                </div>
+                <div class="form-group">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" type="submit">Submit</button>
+                </div>
             </form>
-          </div>
+        </div>
         </div>
       </div>
     </section>
