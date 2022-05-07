@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link rel="stylesheet" href="css/Admin.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
     <meta
       name="viewport"
       content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
@@ -24,16 +24,11 @@
     <nav class="navbar background">
       <ul class="nav-list">
         <div class="logo">
-          <a href="userinterface.jsp"><img src="images/clipart1693714.png"></a>
+          <img src="images/clipart1693714.png">
         </div>
       </ul>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <div class="rightNav">
-        <button onclick="location.href='userinterface.jsp'" class="btn btn-sm">
-          <i class="fa-solid fa-house"></i>
-          Home
-        </button>
-        &nbsp;&nbsp;
         <button
           type="button"
           class="btn btn-sm"
@@ -41,30 +36,9 @@
           onclick="location.href='homepage.html'"
         >
           <i class="fas fa-external-link-alt"></i> Logout
-        </button>
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </nav>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
-
-<%
-String driverName = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://localhost:3306/";
-String dbName = "hms";
-String userId = "root";
-String password = "root";
-try {
-Class.forName(driverName);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
-Connection connection = null;
-Statement statement = null;
-ResultSet resultSet = null;
-%>
 
     <section class="firstsection">
       <div class="box-main">
@@ -75,46 +49,27 @@ ResultSet resultSet = null;
           <table>
             <thead>
               <th>User Name</th>
-              <th>User Email</th>
-              <th>Phone No</th>
-              <th>Address</th>
+              <th>User Mail ID</th>
+              <th>User Phone No</th>
+              <th>User Address</th>
               <th>Password</th>
             </thead>
 
             <tbody>
-            <%
-try{ 
-connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
-statement=connection.createStatement();
-String s1=(String)session.getAttribute("sesmail");
-System.out.println(s1);
-String sql ="SELECT * FROM usrbook where usrmail='" +s1+"'";
-resultSet = statement.executeQuery(sql);
-while(resultSet.next()){
-%>
             
               <tr>
                 <!--While loop-->
-                <td data-label="name"><%=resultSet.getString("hotnam") %></td>
-                <td data-label="loc"><%=resultSet.getString("location") %></td>
-                <td data-label="in"><%=resultSet.getString("indate") %></td>
-                <td data-label="out"><%=resultSet.getString("outdate") %></td>
-                <td data-label="peop"><%=resultSet.getString("nop") %></td>
+                <td data-label="name">dnbvkjzdnb</td>
+                <td data-label="loc">kjdnvbj</td>
+                <td data-label="in">dkbvjs</td>
+                <td data-label="out">jvnjnv</td>
+                <td data-label="peop">skbvjsvsj</td>
+                
               </tr>
               
-<% 
-}
-} catch (Exception e) {
-e.printStackTrace();
-}
-%>
             </tbody>
           </table>
           
-        </div>
-      </div>
-      <div class="box-main">
-        <div class="firstHalf">
           <h3 style="font-family: sans-serif; font-weight: bold">
             Total Hotels:
           </h3>
@@ -128,32 +83,16 @@ e.printStackTrace();
             </thead>
 
             <tbody>
-            <%
-try{ 
-connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
-statement=connection.createStatement();
-String s1=(String)session.getAttribute("sesmail");
-System.out.println(s1);
-String sql ="SELECT * FROM usrbook where usrmail='" +s1+"'";
-resultSet = statement.executeQuery(sql);
-while(resultSet.next()){
-%>
             
               <tr>
                 <!--While loop-->
-                <td data-label="name"><%=resultSet.getString("hotnam") %></td>
-                <td data-label="loc"><%=resultSet.getString("location") %></td>
-                <td data-label="in"><%=resultSet.getString("indate") %></td>
-                <td data-label="out"><%=resultSet.getString("outdate") %></td>
-                <td data-label="peop"><%=resultSet.getString("nop") %></td>
+                <td data-label="name">jsvnsvns</td>
+                <td data-label="loc">abjhbch</td>
+                <td data-label="in">skhbcjs</td>
+                <td data-label="out">anbcjsb</td>
+                <td data-label="peop">ajcjsnj</td>
               </tr>
               
-<% 
-}
-} catch (Exception e) {
-e.printStackTrace();
-}
-%>
             </tbody>
           </table>
           
