@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <%
+  if(session.getAttribute("sesmail")==null){
+	  response.sendRedirect("login.html");
+  }
+  
+  
+  %>
+  <%response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+ %>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel My Bookings</title>
+    <title>BonVoyage</title>
     <link rel="stylesheet" href="./css/hotelmybookings.css" />
     <meta
       name="viewport"
@@ -39,7 +48,7 @@
           type="button"
           class="btn btn-sm"
           id="button"
-          onclick="location.href='homepage.html'"
+          onclick="location.href='logout.jsp'"
         >
           <i class="fas fa-external-link-alt"></i> Logout
         </button>
@@ -90,12 +99,16 @@ ResultSet resultSet = null;
 
             <tbody>
             <%
+            
 try{ 
 connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 statement=connection.createStatement();
 String s1=(String)session.getAttribute("sesmail");
+String s2=(String)session.getAttribute("hotnam");
 System.out.println(s1);
-String sql ="SELECT * FROM usrbook where usrmail='" +s1+"'";
+System.out.println(s2);
+
+String sql ="SELECT * FROM usrreg CROSS JOIN usrbook where hotmail='" +s1+"'";
 
 
 resultSet = statement.executeQuery(sql);
@@ -104,8 +117,8 @@ while(resultSet.next()){
             
               <tr>
                 <!--While loop-->
-                <td data-label="name"><%=resultSet.getString("hotnam") %></td>
-                <td data-label="loc"><%=resultSet.getString("location") %></td>
+                <td data-label="name"><%=resultSet.getString("nam") %></td>
+                <td data-label="loc"><%=resultSet.getString("email") %></td>
                 <td data-label="in"><%=resultSet.getString("indate") %></td>
                 <td data-label="out"><%=resultSet.getString("outdate") %></td>
                 <td data-label="peop"><%=resultSet.getString("nop") %></td>
@@ -128,7 +141,7 @@ e.printStackTrace();
 
     <footer class="background">
       <p class="text-footer">
-        Â© Copyright 2022 BonVoyage. All rights reserved.
+        © Copyright 2022 BonVoyage. All rights reserved.
       </p>
     </footer>
   </body>

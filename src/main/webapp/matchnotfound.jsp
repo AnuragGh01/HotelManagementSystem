@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<%
+  if(session.getAttribute("sesmail")==null){
+	  response.sendRedirect("login.html");
+  }
+  
+  
+  %>
+  <%response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+ %>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +21,7 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="css/matchnotfound.css" />
-  <title>Search Failed</title>
+  <title>BonVoyage</title>
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
   <script
     src="https://kit.fontawesome.com/32ee0c0b42.js"

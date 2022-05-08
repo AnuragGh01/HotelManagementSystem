@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<%
+  if(session.getAttribute("sesmail")==null){
+	  response.sendRedirect("login.html");
+  }
+  
+  
+  %>
+  <%response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+ %>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HotelProfile</title>
+  <title>BonVoyage</title>
   <link rel="stylesheet" href="./css/hotelaccount.css" />
   <meta
     name="viewport"
@@ -39,13 +48,13 @@
         type="button"
         class="btn btn-sm"
         id="button"
-        onclick="location.href='homepage.html'"
+        onclick="location.href='logout.jsp'"
       >
         <i class="fas fa-external-link-alt"></i> Logout
       </button>
     </div>
   </nav>
-<%@page import="java.sql.DriverManager"%>
+  <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -77,13 +86,14 @@ connection = DriverManager.getConnection(connectionUrl+dbName, userId, password)
 statement=connection.createStatement();
 String s1=(String)session.getAttribute("sesmail");
 System.out.println(s1);
-String sql ="SELECT * FROM usrreg where email='" +s1+"'";
+String sql ="SELECT * FROM hotelreg where email='" +s1+"'";
 System.out.println(s1);
 
 
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
+
 <section class="firstsection">
   <div class="box-main">
     <div class="firstHalf">
@@ -105,9 +115,9 @@ while(resultSet.next()){
               <h1><%=resultSet.getString("nam") %></h1>
             </div>
             <div class="w3-padding-64">
-              <p class="w3-button w3-black w3-block w3-left-align w3-hover-light-green w3-padding-16"><i class="fa-solid fa-envelope"></i> Hotel E-mail: <%=resultSet.getString("email") %></p>
-              <p class="w3-button w3-black w3-block w3-left-align w3-hover-light-green w3-padding-16"><i class="fa-solid fa-phone"></i> Hotel Phone: <%=resultSet.getString("phone") %></p>
-              <p class="w3-button w3-black w3-block w3-left-align w3-hover-light-green w3-padding-16"><i class="fa-solid fa-location-dot"></i> Hotel Address: <%=resultSet.getString("address") %></p>
+              <p class="w3-button w3-black w3-block w3-left-align w3-hover-light-green w3-padding-16"><i class="fa-solid fa-envelope"></i> Hotel E-mail:<%=resultSet.getString("email") %> </p>
+              <p class="w3-button w3-black w3-block w3-left-align w3-hover-light-green w3-padding-16"><i class="fa-solid fa-phone"></i> Hotel Phone:<%=resultSet.getString("phone") %></p>
+              <p class="w3-button w3-black w3-block w3-left-align w3-hover-light-green w3-padding-16"><i class="fa-solid fa-location-dot"></i> Hotel Address:<%=resultSet.getString("address") %> </p>
               <p class="w3-button w3-black w3-block w3-left-align w3-hover-light-green w3-padding-16"><i class="fa-solid fa-address-card"></i> Hotel ID-Proof: 0000000000</p>
             </div>
           </div>   
@@ -124,9 +134,10 @@ while(resultSet.next()){
 e.printStackTrace();
 }
 %>
+    
 <footer class="background">
   <p class="text-footer">
-    Â© Copyright 2022 BonVoyage. All rights reserved.
+    © Copyright 2022 BonVoyage. All rights reserved.
   </p>
 </footer>
    
