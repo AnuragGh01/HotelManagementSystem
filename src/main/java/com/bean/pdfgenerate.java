@@ -22,7 +22,7 @@ public class pdfgenerate {
 
 	public static void king(String s1,String s2,String s3,String s4,String s5,String s6,String s7,int s8,int s9) {
 		System.out.println("welcome king");
-		String file_name="C:\\Users\\Anurag Ghosh\\eclipse-web-workspace\\pdf_mail\\pdf-generate\\invoice.pdf";//name of pdf
+		String file_name="pdf location(full qualified path)";//name of pdf
 		System.out.println(s1);
 
 		
