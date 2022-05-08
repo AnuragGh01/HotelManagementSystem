@@ -18,15 +18,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 
-<body id="about">
+<body>
     <nav class="navbar background">
         <ul class="nav-list">
             <div class="logo">
                 <img src="./images/clipart1693714.png" />
             </div>
-            <li><a href="#about">About</a></li>
-            <li><a href="#developers">Developers</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="about active"><a href="#about">About</a></li>
+            <li class="developers"><a href="#developers">Developers</a></li>
+            <li class="contact"><a href="#contact">Contact</a></li>
         </ul>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="rightNav">
@@ -37,7 +37,7 @@
         </div>
     </nav>
 
-    <section class="firstsection">
+    <section class="firstsection" id="about">
         <div class="box-main">
             <div class="firstHalf">
                 <h1 class="text-big">Welcome to Bon Voyage ! India's favourite Hotel Booking Partner .</h1>
@@ -156,5 +156,31 @@
         <p class="text-footer">© Copyright 2022 BonVoyage. All rights reserved.</p>
     </footer>
 </body>
+
+
+
+<script>
+    const sections = document.querySelectorAll("section");
+    const navLi = document.querySelectorAll(".nav-list li");
+    window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute("id");
+        }
+    });
+
+    navLi.forEach((li) => {
+        li.classList.remove("active");
+        if (li.classList.contains(current)) {
+        li.classList.add("active");
+        }
+    });
+});
+</script>
+
+
 
 </html>

@@ -40,6 +40,7 @@
 }
 
 .nav-list li {
+  font-weight:500;
   list-style: none;
   padding: 26px 30px;
 }
@@ -53,6 +54,15 @@
   color: grey;
 }
 
+/* .nav-list li.active {
+  background-color: crimson;
+  transition: 0.3s ease background-color;
+} */
+.nav-list li.active a {
+  color: rgba(0, 255, 21, 0.842);
+  transition: 0.3s ease color;
+}
+
 .rightnav {
   width: 30%;
   text-align: right;
@@ -61,7 +71,7 @@
 .firstsection {
   background-image: url("../images/bg-ab.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 130vh;
 }
 
 .secondsection {
