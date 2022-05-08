@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <%
-  if(session.getAttribute("sesmail")==null){
-	  response.sendRedirect("login.html");
-  }
-  
-  
-  %>
-  <%response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
- %>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BonVoyage</title>
+    <title>My Bookings</title>
     <link rel="stylesheet" href="./css/mybookings.css" />
     <meta
       name="viewport"
@@ -48,7 +39,7 @@
           type="button"
           class="btn btn-sm"
           id="button"
-          onclick="location.href='logout.jsp'"
+          onclick="location.href='homepage.html'"
         >
           <i class="fas fa-external-link-alt"></i> Logout
         </button>

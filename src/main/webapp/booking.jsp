@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <%
-  if(session.getAttribute("sesmail")==null){
-	  response.sendRedirect("login.html");
-  }
-  
-  
-  %>
-  <%response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
- %>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BonVoyage</title>
+    <title>Booking</title>
     <link rel="stylesheet" href="./css/booking.css" />
     <meta
       name="viewport"
@@ -53,46 +44,23 @@
       <div class="box-main">
         <div style="position: absolute; left: 100px" class="firstHalf">
           <form action="UsrBookServ" method="post">
-          <%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
-
-<%
-String driverName = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://localhost:3306/";
-String dbName = "hms";
-String userId = "root";
-String password = "root";
-try {
-Class.forName(driverName);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
-Connection connection = null;
-Statement statement = null;
-ResultSet resultSet = null;
-%>
           <% 
 String ss =request.getParameter("nam");
 String st =request.getParameter("address");
-String hotmail =request.getParameter("hotmail");
 
-System.out.println(ss+" "+st+" "+hotmail);
+System.out.println(ss+" "+st);
 session.setAttribute("hotnam",ss);
 session.setAttribute("location",st);
-session.setAttribute("hotmail",hotmail);
 
 %>
-            <i><h1 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold;"><%out.print(ss);%></h1></i>
-            <i><h1 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold;">(<%out.print(st);%>)</h1></i>
+            <i><u><h1 style="font-weight: bold"><%out.print(ss);%></h1></u></i>
+            <i><h1 style="font-weight: bold">(<%out.print(st);%>)</h1></i>
             
             <%String s1=(String)session.getAttribute("sesmail");%>
-            <i><h4 style="font-weight: bold;left:1000px;top:7px; position:absolute;">Your registered email is: <%out.print(s1);%></h4></i>
+            <i><h4 style="font-weight: bold;left:1000px;top:7px; position:absolute">Your registered email is: <u><%out.print(s1);%></u></h4></i>
             
             <div class="grid">
-            <label style="font-weight: bold;" for="arrive" class="label-date"
+            <label style="font-weight: bold" for="arrive" class="label-date"
                 >Check-in Date</label
               >
               <input
@@ -157,34 +125,17 @@ session.setAttribute("hotmail",hotmail);
               <label style="font-weight: bold" for="fruit">Room Type</label>
               <br />
             </div>
-             <%
-    try{ 
-        connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
-        statement=connection.createStatement();
-        String s2=(String)session.getAttribute("hotmail");
-        System.out.println(s1);
-       String sql ="SELECT * FROM hotelbook where hotemail='" +s2+"' order by id desc limit 1";
-        resultSet = statement.executeQuery(sql);
-        while(resultSet.next()){
-    %>
 
-            <div style="position: relative; left: 380px; bottom: 120px ;">
-              <h4 style="font-weight: 500;font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold;">No. of A.C rooms available: <%=resultSet.getString("ac")%></h4>
-              <h4 style="font-weight: 500;font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold;">No. of non-A.C rooms available: <%=resultSet.getString("nonac")%></h4>
+            <div style="position: absolute; right: -340px; bottom: 120px ;">
+              <h4 style="font-weight: 500;">No. of A.C rooms available: 5</h4>
+              <h4 style="font-weight: 500;">No. of non-A.C rooms available: 5</h4>
             </div>
-            <div style="position: relative; left: 380px; bottom: 120px ;">
-              <h4 style="font-weight: 500;font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold;">Price of A.C rooms: <%=resultSet.getString("pr_ac")%></h4>
-              <h4 style="font-weight: 500;font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold;">Price of non-A.C rooms: <%=resultSet.getString("pr_nonac")%></h4>
-              
+            <div style="position: absolute; right: -298px; bottom: 40px ;">
+              <h4 style="font-weight: 500;">Price of A.C rooms: 2000</h4>
+              <h4 style="font-weight: 500;">Price of non-A.C rooms: 1000</h4>
             </div>
-            <%  
-  }
-  } catch (Exception e) {
-  e.printStackTrace();
-  }
-  %>
             <div class="grid">
-             
+              <br />
               <button type="submit" value="Submit" class="btn btn-sm" >
                 &nbsp;&nbsp;Book Now&nbsp;&nbsp;
               </button>

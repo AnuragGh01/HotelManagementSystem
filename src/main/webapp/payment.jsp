@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-<%response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
- %>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +13,7 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="css/payment.css" />
-  <title>BonVoyage</title>
+  <title>Payment</title>
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
   <script
     src="https://kit.fontawesome.com/32ee0c0b42.js"
@@ -61,7 +59,6 @@
                         <option value="others">Others.</option>
                     </select>
                     <div class="expcvv">
-                   
 
                         <p style="font-weight: bold;" class="expcvv_text">Valid thru:</p>
                         <input type="date" class="inputbox" name="exp_date" id="exp_date" required />
@@ -70,9 +67,7 @@
                         <input type="password" maxlength="3" class="inputbox" name="cvv" id="cvv" placeholder="xxx" required />
                     </div>
                     <p></p>
-                    
-                    <button type="submit" class="btn btn-sm">Pay INR <%=session.getAttribute("price")%></button><br>
-                 <nobr> <span style="color:red; font-weight:bold">*</span><span style="font-weight:bold"> Rooms allocated: <%=session.getAttribute("nor")%></span></nobr>
+                    <button type="submit" class="btn btn-sm">Pay 1200</button>
                 </form>
             </div>
         </div>
