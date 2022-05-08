@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  /* justify-content: left; */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.background {
+  background: black;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center 120px;
+}
+
+.nav-list {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.logo {
+  display: flex;
+  justify-content:left;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  width: 350px;
+  border-radius: 50px;
+}
+
+.rightnav {
+  width: 30%;
+  text-align: right;
+}
+.btn {
+  width: auto;
+  height: auto;
+  padding: 8px 20px;
+  margin: 7px 0;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(22, 22, 22);
+}
+
+.btn-sm {
+  padding: 6px 10px;
+  vertical-align: middle;
+}
+
+.text-footer {
+  text-align: center;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.firstsection {
+  background-image: url("../images/bg-ab.jpg");
+  background-size: cover;
+  height:100vh;
+}
+
+.box-main {
+  /* display: flex; */
+  /* justify-content: center; */
+  align-items: center;
+  color: black;
+  max-width: 80%;
+  margin: auto;
+  height: 80%;
+}
+
+.firsthalf {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+table {
+  /* width: 100%; */
+  border-spacing: 0;
+  border-radius: 1em;
+  overflow-y:scroll;
+   height:300px;
+   display:block;
+}
+
+thead {
+ visibility: hidden;
+ position: absolute;
+ width: 0;
+ height: 0;
+}
+
+th {
+  background: #111111;
+  color: #fff;
+}
+
+td:nth-child(1) {
+  background: #0000ff;
+  color: #fff;
+  border-radius: 1em 1em 0 0;
+}
+
+th, td {
+  padding: 1em;
+}
+
+tr, td {
+  display: block;
+}
+
+td {
+  position: relative;
+  color:blue;
+}
+
+td::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  padding-left: 1em;
+  font-weight: 600;
+  font-size: .9em;
+  text-transform: uppercase;
+}
+
+tr {
+  margin-bottom: 1.5em;
+  border: 1px solid #ddd;
+  border-radius: 1em;
+  text-align: right;
+}
+
+tr:last-of-type {
+  margin-bottom: 0;
+}
+
+td:nth-child(n+2):nth-child(odd) {
+  background-color: #ddd;
+}
+
+
+@media only screen and (min-width: 768px) {
+  
+  table {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+  }
+  
+  thead {
+    visibility: visible;
+    position: relative;
+  }
+  
+  th {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: .9em;
+  }
+  
+  tr {
+    display: table-row;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+  background-color: #ddd;
+}
+  
+  td {
+    display: table-cell;
+  }
+  
+  td::before {
+    content: none;
+  }
+  
+  td:nth-child(1) {
+    background: transparent;
+    color:blue;
+    border-radius: 0;
+  }
+  
+  td:nth-child(n+2):nth-child(odd) {
+    background-color: transparent;
+  }
+  
+  
+}
