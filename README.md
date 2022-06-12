@@ -1,4 +1,4 @@
-# BonVoyage - HotelManagementSystem
+# BonVoyage - Hotel Management System
 A Hotel Management System that will help customers to book top hotels in India.
 Have a glance below 👇
 
