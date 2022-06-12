@@ -121,7 +121,7 @@ ResultSet resultSet = null;
         statement=connection.createStatement();
         String s1=(String)session.getAttribute("sesmail");
         System.out.println(s1);
-       String sql ="SELECT * FROM hotelbook where hotemail='" +s1+"' order by id desc limit 1";
+       String sql ="SELECT * FROM hotelbook where email='" +s1+"' order by id desc limit 1";
         resultSet = statement.executeQuery(sql);
         while(resultSet.next()){
     %>

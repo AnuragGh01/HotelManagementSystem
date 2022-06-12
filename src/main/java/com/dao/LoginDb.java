@@ -60,7 +60,7 @@ public class LoginDb {
 			ResultSet rl = st.executeQuery(sql2);
 			
 			while(rl.next()) {
-				if(email.equals(rl.getString(3))&&psw.equals(rl.getString(5))) {
+				if(email.equals(rl.getString(2))&&psw.equals(rl.getString(5))) {
 					return 2;
 				}
 			

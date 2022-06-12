@@ -169,4 +169,14 @@
     <servlet-name>logout</servlet-name>
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>checkmailserv</display-name>
+    <servlet-name>checkmailserv</servlet-name>
+    <servlet-class>com.controller.checkmailserv</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkmailserv</servlet-name>
+    <url-pattern>/checkmailserv</url-pattern>
+  </servlet-mapping>
 </web-app>

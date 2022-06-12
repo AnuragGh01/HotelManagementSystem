@@ -106,12 +106,13 @@ ResultSet resultSet = null;
                 <div class="input-group">
                   <div class="form-outline">
                     <input
+                    style="border-radius: 25px 0px 0px 25px;"
                       type="text"
                       name="search"
-                      placeholder="Search Places (E.g.: Delhi) or Hotel"
+                      placeholder=" Search Places (E.g.: Delhi) or Hotel"
                     />
                   </div>
-                  <button type="submit"><i class="fa fa-search"></i></button>
+                  <button style="border-radius: 0px 25px 25px 0px;" type="submit"><i class="fa fa-search"></i></button>
                 </div>
               </div>
             </form>
@@ -131,7 +132,7 @@ ResultSet resultSet = null;
                       <img src="./images/Taj-916x516.jpg" />
                     </div>
                     <div class="text">
-                      <h3><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam")%> (<%=resultSet.getString("address")%>)</a></h3>
+                      <h3 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif";><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam")%> (<%=resultSet.getString("address")%>)</a></h3>
                     </div>
                     <%resultSet.next(); %>
                   </div>
@@ -142,14 +143,14 @@ ResultSet resultSet = null;
                       />
                     </div>
                     <div class="text">
-                      <h3><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
+                      <h3 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif";><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
                     </div>
                     <%resultSet.next(); %>
                   </div>
                   <div class="row1">
                     <div class="image"><img src="./images/ramada.jpg" /></div>
                     <div class="text">
-                      <h3><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
+                      <h3 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif";><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
                     </div>
                     <%resultSet.next(); %>
                   </div>
@@ -158,7 +159,7 @@ ResultSet resultSet = null;
                       <img src="./images/istockphoto-1066999762-612x612.jpg" />
                     </div>
                     <div class="text">
-                      <h3><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
+                      <h3 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif";><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
                     </div>
                     <%resultSet.next(); %>
                   </div>
@@ -171,7 +172,7 @@ ResultSet resultSet = null;
                       />
                     </div>
                     <div class="text">
-                      <h3><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
+                      <h3 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif";><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
                     </div>
                     <%resultSet.next(); %>
                   </div>
@@ -180,7 +181,7 @@ ResultSet resultSet = null;
                       <img src="./images/Top-10-Luxury-Hotels-in-India.jpg" />
                     </div>
                     <div class="text">
-                      <h3><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
+                      <h3 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif";><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
                     </div>
                     <%resultSet.next(); %>
                   </div>
@@ -189,7 +190,7 @@ ResultSet resultSet = null;
                       <img src="./images/maxresdefault.jpg" />
                     </div>
                     <div class="text">
-                      <h3><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
+                      <h3 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif";><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
                     </div>
                     <%resultSet.next(); %>
                   </div>
@@ -198,7 +199,7 @@ ResultSet resultSet = null;
                       <img src="./images/Taj Lake Palace Udaipur.webp" />
                     </div>
                     <div class="text">
-                      <h3><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
+                      <h3 style="font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif";><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam") %> (<%=resultSet.getString("address")%>)</a></h3>
                     </div>
                     <%resultSet.next(); %>
                   </div>

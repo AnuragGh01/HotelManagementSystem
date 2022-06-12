@@ -83,6 +83,7 @@ ResultSet resultSet = null;
               <th>User Phone No</th>
               <th>User Address</th>
               <th>Password</th>
+              <th>&nbsp&nbsp&nbsp&nbspAction</th>
             </thead>
              <%
     try{ 
@@ -102,6 +103,10 @@ ResultSet resultSet = null;
                 <td data-label="in"><%=resultSet.getString("phone")%></td>
                 <td data-label="out"><%=resultSet.getString("address")%></td>
                 <td data-label="peop"><%=resultSet.getString("pass")%></td>
+                <td class="text-center">
+                <a href='delete.jsp?u=<%=resultSet.getString("email") %>' class="btnn-dlt">Remove</a>
+                </td>
+               
                 
               </tr>
               
@@ -124,6 +129,7 @@ ResultSet resultSet = null;
               <th>Hotel Mail Id</th>
               <th>Hotel Phone No</th>
               <th>Password</th>
+               <th>&nbsp&nbsp&nbsp&nbspAction</th>
             </thead>
              <%
     try{ 
@@ -143,6 +149,9 @@ ResultSet resultSet = null;
                 <td data-label="in"><%=resultSet.getString("email")%></td>
                 <td data-label="out"><%=resultSet.getString("phone")%></td>
                 <td data-label="peop"><%=resultSet.getString("pass")%></td>
+                <td class="text-center">
+                <a href='deletehotel.jsp?u=<%=resultSet.getString("email") %>' class="btnn-dlt">Remove</a>
+                </td>
               </tr>
               
             </tbody>

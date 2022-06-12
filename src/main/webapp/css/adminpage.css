@@ -162,6 +162,24 @@ td:nth-child(n+2):nth-child(odd) {
   background-color: #ddd;
 }
 
+.btnn-dlt {
+  width: auto;
+  height: auto;
+  padding: 8px 20px;
+  margin: 7px 0;
+  border: 2px solid red;
+  border-radius: 8px;
+  background: none;
+  color: red;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnn-dlt:hover {
+  background-color: rgba(255, 0, 0, 0.452);
+  color: black;
+}
+
 
 @media only screen and (min-width: 768px) {
   

@@ -64,12 +64,13 @@
           <div class="input-group">
             <div class="form-outline">
               <input
+               style="border-radius: 25px 0px 0px 25px;"
                 type="text"
                 name="search"
-                placeholder="Search Places (E.g.: Delhi) or Hotel"
+                placeholder=" Search Places (E.g.: Delhi) or Hotel"
               />
             </div>
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button style="width:150px;border-radius: 0px 25px 25px 0px;type="submit"><i class="fa fa-search"></i></button>
           </div>
           <br>
           <span style="color: red; display:flex; justify-content: center; font-family: sans-serif; font-size: larger; font-weight: 600;"><i class="fa-solid fa-triangle-exclamation">&nbsp;</i> Match Not Found !</span>

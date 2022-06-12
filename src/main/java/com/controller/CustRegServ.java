@@ -56,7 +56,7 @@ public class CustRegServ extends HttpServlet {
 //			pw.println("success");
 			res.sendRedirect("login.html");
 		}else {
-			pw.println("failed");
+			res.sendRedirect("updatedsignup.html");
 		}
 		
 

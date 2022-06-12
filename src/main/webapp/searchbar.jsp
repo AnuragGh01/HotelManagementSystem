@@ -90,12 +90,13 @@ ResultSet resultSet = null;
     <div class="input-group">
       <div class="form-outline">
         <input
+        style="border-radius: 25px 0px 0px 25px;"
           type="text"
           name="search"
-          placeholder="Search Places (E.g.: Delhi) or Hotel"
+          placeholder=" Search Places (E.g.: Delhi) or Hotel"
         />
       </div>
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <button style="width:150px;border-radius: 0px 25px 25px 0px;"type="submit"><i class="fa fa-search"></i></button>
     </div>
   </div>
 </form>
@@ -121,7 +122,7 @@ while(resultSet.next()){
                     <li class="items">                                 <!--Ekhan theke-->
                         <img src="images/Top-10-Luxury-Hotels-in-India.jpg">
                         <div class="details">
-                           <h2 style="text-decoration:none;"><a href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam")%></a></h2>
+                           <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;"><a style="text-decoration:none;" href="booking.jsp?nam=<%=resultSet.getString("nam") %>&address=<%=resultSet.getString("address")%>&hotmail=<%=resultSet.getString("email")%>"><%=resultSet.getString("nam")%></a></h2>
                             <%email=resultSet.getString("email"); %>
                            Address: <%=resultSet.getString("address")%><br>
                             Email: <%=resultSet.getString("email")%> <br>

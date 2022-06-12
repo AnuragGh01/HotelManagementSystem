@@ -5,8 +5,10 @@
 
 body {
   background-image: url("../images/bg-ab.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 140vh;
+  
 }
 .navbar {
   display: flex;
@@ -53,6 +55,7 @@ body {
 {
     display: flex;
     justify-content: center;
+    
 }
 
 .form-outline
@@ -60,6 +63,7 @@ body {
     display: flex;
     justify-content: center;
     height: 40px;
+
 }
 .form-control
 {
@@ -155,13 +159,19 @@ body {
 }
 a{
 	text-decoration:none;
+	
 }
+
 
 .image img {
   height: 290px;
   width: 290px;
   padding: 20px;
   border-radius: 20%;
+}
+.row1:hover{
+	transform:scale(1.1);
+	transition:0.2s;
 }
 
 .text-footer {

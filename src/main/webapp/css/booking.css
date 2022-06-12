@@ -59,11 +59,50 @@
   background-color: rgba(22, 22, 22, 0.562);
 }
 
+.btnu {
+  width: auto;
+  height: auto;
+  padding: 8px 20px;
+  margin: 7px 0;
+  border: 2px solid white;
+  border-radius: 25px;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btnu:hover {
+  background-color: rgba(22, 22, 22, 0.562);
+}
+
 .btn-sm {
   background-color: black;
   padding: 6px 10px;
   vertical-align: middle;
 }
+
+.btnp {
+  width: auto;
+  height: auto;
+  padding: 8px 20px;
+  margin: 7px 0;
+  border: 2px solid white;
+  border-radius: 25px;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btnp:hover {
+  background-color: rgba(22, 22, 22, 0.562);
+}
+
+.btnp-sm {
+  background-color: black;
+  padding: 6px 10px;
+  vertical-align: middle;
+}
+
 
 .text-footer {
   text-align: center;

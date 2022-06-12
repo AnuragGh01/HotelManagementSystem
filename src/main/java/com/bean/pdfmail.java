@@ -54,7 +54,7 @@ public static void pdf(String mail) {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
 				// TODO Auto-generated method stub
-				return new PasswordAuthentication("bonvoyageofficial.in@gmail.com", "password");
+				return new PasswordAuthentication("bonvoyageofficial.in@gmail.com", "anuraghms@6784");
 			} 
 			
 			});

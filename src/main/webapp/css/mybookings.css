@@ -108,7 +108,7 @@ table {
 
 thead {
  visibility: hidden;
- position: absolute;
+ position: sticky;
  width: 0;
  height: 0;
 }
