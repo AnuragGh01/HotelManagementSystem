@@ -20,12 +20,12 @@ https://user-images.githubusercontent.com/97626339/172354790-6fbde765-036c-4bd0-
 ---
 Tools And Technologies:
 
--JAVA
--HTML
--CSS
--JAVASCRIPT
--MYSQL
--Apache Tomcat
+- JAVA
+- HTML
+- CSS
+- JAVASCRIPT
+- MYSQL
+- Apache Tomcat
 
 ---
 
