@@ -29,7 +29,7 @@ Tools And Technologies:
 
 ---
 
-Developers :
+Developers:
 
 - Anurag Ghosh
 - Saptarshi Bose
