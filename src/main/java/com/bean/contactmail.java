@@ -51,7 +51,7 @@ public  void king(String name,String email) {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
 				// TODO Auto-generated method stub
-				return new PasswordAuthentication("bonvoyageofficial.in@gmail.com", "pass");
+				return new PasswordAuthentication("bonvoyageofficial.in@gmail.com", "passw");
 			} 
 			
 			});
